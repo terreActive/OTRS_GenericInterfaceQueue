@@ -31,6 +31,15 @@ There are only a few configuration items:
     GenericInterface::Operation::QueueSearch###SearchLimit => 100
 ```
 
+# WEBSERVICE
+
+Create a webservice on the base of `doc/webservices/GenericQueueConnectorREST.yml` and upload it through Admin -> Web Services -> Add Web Service. The resulting REST service can subsequently be accessed like
+
+```url
+ https://hostname/otrs/nph-genericinterface.pl/Webservice/my-service/QueueList
+ https://hostname/otrs/nph-genericinterface.pl/Webservice/my-service/Queue?QueueSearch=<pattern>
+```
+
 # BUILD
 
 The repository provides a SOPM file. Building an OPM package is outside the

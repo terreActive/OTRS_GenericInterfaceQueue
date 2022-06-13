@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <otrs_package version="6.0">
     <Name>GenericInterfaceQueue</Name>
-    <Version>6.3.3</Version>
+    <Version>6.0.0</Version>
     <Framework>6.x.x</Framework>
     <Vendor>terreActive AG</Vendor>
     <URL>http://www.terreactive.ch/</URL>
     <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
-    <ChangeLog Version="6.2.2">Require Perl Module List::Compare</ChangeLog>
-    <Description Lang="en">Import CSV files from the otrs.Console</Description>
-    <Description Lang="de">Importiren von CSV-Files mittels otrs.Console</Description>
+    <ChangeLog Version="6.0.0">Initial version: QueueList and QueueSearch</ChangeLog>
+    <Description Lang="en">Export System::Queue via GenericInterface</Description>
+    <Description Lang="de">Queue-Funktionen mittels GenericInterface für Webservices</Description>
     <BuildDate>?</BuildDate>
     <BuildHost>?</BuildHost>
     <Filelist>
