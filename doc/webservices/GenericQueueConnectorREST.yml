@@ -1,0 +1,36 @@
+---
+Debugger:
+  DebugThreshold: debug
+  TestMode: '0'
+Description: Queue Connector REST
+FrameworkVersion: 6.3.3
+Provider:
+  Operation:
+    QueueList:
+      Description: List all queues
+      IncludeTicketData: '0'
+      Type: Queue::QueueList
+    QueueSearch:
+      Description: Search for Queues
+      Type: Queue::QueueSearch
+  Transport:
+    Config:
+      AdditionalHeaders: ~
+      KeepAlive: ''
+      MaxLength: '100000000'
+      RouteOperationMapping:
+        QueueList:
+          ParserBackend: JSON
+          RequestMethod:
+          - GET
+          Route: /QueueList
+        QueueSearch:
+          ParserBackend: JSON
+          RequestMethod:
+          - GET
+          Route: /Queue
+    Type: HTTP::REST
+RemoteSystem: ''
+Requester:
+  Transport:
+    Type: ''
