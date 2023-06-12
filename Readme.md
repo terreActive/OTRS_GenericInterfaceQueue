@@ -1,21 +1,18 @@
-# NAME
+## NAME
 
 GenericInterfaceQueue.opm - Implement Queue functions for Webservices
 
-# VERSION
+## VERSION
 
-version 6.0.0
+version 7.0.0
 
-# DESCRIPTION
+## DESCRIPTION
 
-The free version of OTRS 6 implements only a subset of its internal API also as
-GenericInterface for use by webservices (REST and SOAP APIs).
+The free version of OTRS 6 and Znuny 7 implement only a subset of its internal API also as GenericInterface for use by webservices (REST and SOAP APIs).
 
-This Add-on implements some Kernel::System::Queue functions as
-Kernel::GenericInterface::Operation::Queue enabling the creation of webservices
-with a few mouse clicks.
+This add-on implements some `Kernel::GenericInterface::Operation::Queue` enabling the creation of webservices with a few mouse clicks.
 
-# INSTALLATION
+## INSTALLATION
 
 ```sh
     bin/otrs.Console.pl Admin::Package::Install GenericInterfaceQueue.opm
@@ -23,15 +20,15 @@ with a few mouse clicks.
 
 Or use the GUI: Admin -> Package Manager
 
-# CONFIGURATION
+## CONFIGURATION
 
 There are only a few configuration items:
 
-```
+```perl
     GenericInterface::Operation::QueueSearch###SearchLimit => 100
 ```
 
-# WEBSERVICE
+## WEBSERVICE
 
 Create a webservice on the base of `doc/webservices/GenericQueueConnectorREST.yml` and upload it through Admin -> Web Services -> Add Web Service. The resulting REST service can subsequently be accessed like
 
@@ -40,23 +37,10 @@ Create a webservice on the base of `doc/webservices/GenericQueueConnectorREST.ym
  https://hostname/otrs/nph-genericinterface.pl/Webservice/my-service/Queue?QueueSearch=<pattern>
 ```
 
-# BUILD
+## DEVELOPMENT
 
-The repository provides a SOPM file. Building an OPM package is outside the
-scope of a Readme.
+This is free software. It resides on GitHub at <https://github.com/terreActive/OTRS_GenericInterfaceQueue.git>. Feel free to improve it and submit pull requests.
 
-
-# DEVELOPMENT
-
-This is free software. It resides on GitHub at
-
-```
-    https://github.com/terreActive/OTRS_GenericInterfaceQueue.git
-```
-
-Feel free to improve it and submit pull requests.
-
-# AUTHOR
+## AUTHOR
 
 Othmar Wigger <othmar.wigger@terreactive.ch>
-
